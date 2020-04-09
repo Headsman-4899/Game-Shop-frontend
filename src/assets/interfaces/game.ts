@@ -1,5 +1,6 @@
 export interface Game {
-    id: Number,
+    id?: Number,
+    name: String,
     category: String,
     description: String,
     image: String,

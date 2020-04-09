@@ -1,0 +1,14 @@
+<div class="title">Adding new game</div>
+<div class="admin">
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="game.name">
+    <input type="text" placeholder="Category" name="category" [(ngModel)]="game.category">
+    <input type="text" placeholder="Description" name="description" [(ngModel)]="game.description">
+    <input type="text" placeholder="image" name="image" [(ngModel)]="game.image">
+
+    <input type="text" placeholder="OS" name="requirements" [(ngModel)]="game.requirements[0]">
+    <input type="text" placeholder="Processor" name="requirements" [(ngModel)]="game.requirements[1]">
+    <input type="text" placeholder="GPU" name="requirements" [(ngModel)]="game.requirements[2]">
+    <input type="text" placeholder="Memory" name="requirements" [(ngModel)]="game.requirements[3]">
+
+    <button (click)="onSubmit()">Create</button>
+</div>
