@@ -1,0 +1,19 @@
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+.game-card {
+    padding: 16px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 1rem;
+    width: 200px;
+    cursor: pointer;
+}
+.game-card_img {
+    width: 200px;
+}
+.game-card_img img {
+    max-width: 100%;
+}

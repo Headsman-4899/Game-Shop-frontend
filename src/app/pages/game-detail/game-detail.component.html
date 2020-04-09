@@ -1,0 +1,23 @@
+<div class="details">
+    <div class="detail_header">
+        <div class="details_header__img"><img src="{{game.image}}" alt=""></div>
+        <div class="details_header__text">
+            <div class="details_header__text___title">{{game.name}}</div>
+            <div class="details header__text___req">
+                <div *ngFor="let r of reqs">
+                    <div class="req_item">
+                        <div class="req_item__title">
+                            {{titles[reqs.indexOf(r)]}}:
+                        </div>
+                        <div class="req_item__value">
+                        {{r}}
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="details_text">
+        {{game.description}}
+    </div>
+</div>

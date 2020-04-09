@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { CategoryComponent } from './components/category/category.component';
 import { GameListComponent } from './components/game-list/game-list.component';
+import { GameDetailComponent } from './pages/game-detail/game-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     CategoryComponent,
-    GameListComponent
+    GameListComponent,
+    GameDetailComponent
   ],
   imports: [
     BrowserModule,
