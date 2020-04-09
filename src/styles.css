@@ -1,0 +1,8 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+button {
+    font-size: 16px;
+    cursor: pointer;
+}

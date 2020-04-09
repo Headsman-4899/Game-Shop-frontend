@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1, "name": "Race"
+    },
+    {
+        "id": 2, "name": "Zombie"
+    },
+    {
+        "id": 3, "name": "Action"
+    },
+    {
+        "id": 4, "name": "Stealth"
+    },
+    {
+        "id": 5, "name": "RPG"
+    },
+    {
+        "id": 6, "name": "Horror"
+    },
+    {
+        "id": 7, "name": "Fighting"
+    },
+    {
+        "id": 8, "name": "Arcade"
+    },
+    {
+        "id": 9, "name": "Sport"
+    },
+    {
+        "id": 10, "name": "Strategy"
+    }
+]

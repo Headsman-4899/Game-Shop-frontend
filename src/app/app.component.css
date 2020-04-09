@@ -1,0 +1,23 @@
+.header {
+    background: rgb(39, 39, 39);
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 2rem;
+    height: 60px;
+    align-items: center;
+    padding: 0 2rem;
+}
+.header_logo {
+    font-size: 30px;
+}
+.header_new-games {
+    display: grid;
+    justify-content: end;
+}
+.header button {
+    padding: 0.5rem 2rem;
+    background: rgb(129, 230, 129);
+    border: 0;
+    font-weight: bold;
+}
