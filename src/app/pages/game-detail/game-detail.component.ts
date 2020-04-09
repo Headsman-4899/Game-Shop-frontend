@@ -20,7 +20,7 @@ export class GameDetailComponent implements OnInit {
     let id = parseInt(this.route.snapshot.paramMap.get('id'))
     
     this.gameService.getGames().subscribe(data => {
-      this.game = data.find(game => game.id = id)
+      this.game = data.find(game => game.id == id)
       this.reqs = this.game.requirements
     })
   }

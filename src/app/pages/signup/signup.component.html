@@ -1,0 +1,12 @@
+<div class="signup">
+    <h3>Sign Up</h3>
+
+    <input type="email" name="email" placeholder="Email" [(ngModel)]="user.email">
+    <input type="password" name="password" placeholder="Password" [(ngModel)]="user.password">
+    <input type="password" name="password2" placeholder="Confirm Password" [(ngModel)]="user.password2">
+
+
+    <button (click)="onSubmit()">Sign Up!</button>
+
+    <a href="login">Already have an account? Sign in here!</a>
+</div>

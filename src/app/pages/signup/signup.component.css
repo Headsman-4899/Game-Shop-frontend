@@ -1,0 +1,6 @@
+.signup {
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 1rem;
+}
