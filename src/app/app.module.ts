@@ -10,7 +10,12 @@ import { GameListComponent } from './components/game-list/game-list.component';
 import { GameDetailComponent } from './pages/game-detail/game-detail.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { SignupComponent } from './pages/signup/signup.component'
+=======
+import { SignupComponent } from './pages/signup/signup.component';
+import { AdminComponent } from './pages/admin/admin.component'
+>>>>>>> 960f014a3a076fdab53b5c7c7a71890893a1ed9b
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { SignupComponent } from './pages/signup/signup.component'
     GameListComponent,
     GameDetailComponent,
     LoginComponent,
+<<<<<<< HEAD
     SignupComponent
+=======
+    SignupComponent,
+    AdminComponent
+>>>>>>> 960f014a3a076fdab53b5c7c7a71890893a1ed9b
   ],
   imports: [
     BrowserModule,
