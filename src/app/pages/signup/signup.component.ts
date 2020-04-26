@@ -10,7 +10,7 @@ export class SignupComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   public user = {
-    email: '',
+    username: '',
     password: '',
     password2: ''
   }
@@ -19,7 +19,6 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.user)
-    this.userService.SignUp(this.user)
+    this.userService.SignUp(this.user).subscribe()
   }
 }

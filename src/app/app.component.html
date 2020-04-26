@@ -1,7 +1,11 @@
 <div class="header">
   <div class="header_logo" routerLink="/main-page">TORRENT</div>
   <div class="header_new-games">New games</div>
-  <div class="header_login"><button routerLink="/login">Log in</button></div>
-  <!-- <div class="header_login"><button routerLink="/signup">Sign Up</button></div> -->
+  <div *ngIf="!inSystem">
+    <div class="header_login"><button routerLink="/login">Log in</button></div>
+  </div>
+  <div *ngIf="inSystem">
+    <div class="header_login"><button (click)="logOut()">Log out</button></div>
+  </div>
 </div>
 <router-outlet></router-outlet>

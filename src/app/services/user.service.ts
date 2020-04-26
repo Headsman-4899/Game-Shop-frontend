@@ -9,16 +9,16 @@ import { Observable } from 'rxjs';
 export class UserService {
   constructor(private http: HttpClient) { }
   
-  private _url: string = ""
+  private _url: string = "http://localhost:8000/api/"
   private httpHeaders = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }) 
   }
 
   SignIn(user: User): Observable<User>{
-    return this.http.post<User>(this._url + 'login', user, this.httpHeaders)
+    return this.http.post<User>(this._url + 'login/', user, this.httpHeaders)
   }
 
   SignUp(user: User): Observable<User>{
-    return this.http.post<User>(this._url + 'register', user, this.httpHeaders)
+    return this.http.post<User>(this._url + 'register/', user, this.httpHeaders)
   }
 }

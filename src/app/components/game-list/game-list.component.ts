@@ -15,7 +15,7 @@ export class GameListComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(param => {
       this.gameService.getGames().subscribe(data => {
-        this.games = data.filter(o => o.category == param.id)
+        this.games = data.filter(o => o.category.name == param.id)
         this.title = param.id
       })
     })

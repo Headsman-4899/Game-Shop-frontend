@@ -13,16 +13,31 @@ export class GameDetailComponent implements OnInit {
 
   public game
   public reqs = []
+  public comments = []
 
   public titles = ["OS", "Processor", "Video Card", "Memory Storage"]
 
+  commentData = {
+    username: '',
+    text: '',
+    game: ''
+  }
+
   ngOnInit(): void {
     let id = parseInt(this.route.snapshot.paramMap.get('id'))
-    
-    this.gameService.getGames().subscribe(data => {
-      this.game = data.find(game => game.id == id)
-      this.reqs = this.game.requirements
+    this.gameService.getGame(id).subscribe(game => {
+      this.game = game
+      this.reqs = this.game.requirements.split(',')
     })
+
+    this.gameService.getComment().subscribe(comment => {
+      this.comments = comment.filter(item => item.game.name == this.game.name)
+    })
+  }
+
+  onComment() {
+    this.commentData.game = this.game.name
+    this.gameService.addComment(this.commentData).subscribe()
   }
 
 }

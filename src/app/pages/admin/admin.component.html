@@ -5,10 +5,26 @@
     <input type="text" placeholder="Description" name="description" [(ngModel)]="game.description">
     <input type="text" placeholder="image" name="image" [(ngModel)]="game.image">
 
-    <input type="text" placeholder="OS" name="requirements" [(ngModel)]="game.requirements[0]">
-    <input type="text" placeholder="Processor" name="requirements" [(ngModel)]="game.requirements[1]">
-    <input type="text" placeholder="GPU" name="requirements" [(ngModel)]="game.requirements[2]">
-    <input type="text" placeholder="Memory" name="requirements" [(ngModel)]="game.requirements[3]">
+    <input type="text" placeholder="OS" name="requirements2" [(ngModel)]="game.requirements2[0]">
+    <input type="text" placeholder="Processor" name="requirements2" [(ngModel)]="game.requirements2[1]">
+    <input type="text" placeholder="GPU" name="requirements2" [(ngModel)]="game.requirements2[2]">
+    <input type="text" placeholder="Memory" name="requirements2" [(ngModel)]="game.requirements2[3]">
 
-    <button (click)="onSubmit()">Create</button>
+    <div *ngIf="!editable">
+        <button (click)="onCreate()">Create</button>
+    </div>
+    <div *ngIf="editable">
+        <button (click)="onEdit()">Edit</button>
+    </div>
+
+    <hr/>
+    <div class="list">
+        <div *ngFor="let g of games">
+            <div class="list_item">
+                <div class="list_item__title">{{g.name}}</div>
+                <div class="list_item__edit" (click)="editing(g.id)">Edit</div>
+                <div class="list_item__delete" (click)="deleting(g.id)">Delete</div>
+            </div>
+        </div>
+    </div>
 </div>

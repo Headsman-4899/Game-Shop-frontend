@@ -1,8 +1,9 @@
 export interface Game {
-    id?: Number,
-    name: String,
-    category: String,
-    description: String,
-    image: String,
-    requirements: String[]
+    id?: number,
+    name: string,
+    category: string,
+    description: string,
+    image: string,
+    requirements: string,
+    requirements2?: string[]
 }

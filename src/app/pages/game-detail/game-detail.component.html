@@ -10,8 +10,8 @@
                             {{titles[reqs.indexOf(r)]}}:
                         </div>
                         <div class="req_item__value">
-                        {{r}}
-                    </div>
+                            {{r}}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -19,5 +19,25 @@
     </div>
     <div class="details_text">
         {{game.description}}
+    </div>
+</div>
+<hr/>
+<div class="cs">
+    <div class="cs_item">
+        <div class="cs_item__label">Username</div>
+        <input type="text" name="username" [(ngModel)]="commentData.username">
+    </div>
+    <div class="cs_item"></div>
+    <div class="cs_item__label">Your Comment</div>
+    <textarea name="text" [(ngModel)]="commentData.text" cols="30" rows="10"></textarea>
+</div>
+<div class="cs_button"><button (click)="onComment()">Leave a comment</button></div>
+<hr />
+<div class="cs_text">
+    <div *ngFor="let c of comments">
+        <div class="cs_text__item">
+            <p>{{c.username}}</p>
+            <h4>{{c.text}}</h4>
+        </div>
     </div>
 </div>
